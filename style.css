@@ -1,0 +1,599 @@
+:root {
+    --primary-color: #00172d;
+    --secondary-color: #002950;
+    --accent-color: #00d4ff;
+    --accent-secondary: #0099ff;
+    --gradient-start: #00172d;
+    --gradient-end: #003366;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color) !important;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Hero Section con Estrellas */
+.hero {
+    background: linear-gradient(135deg, #001a33 0%, #003366 50%, #004d99 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 15% 25%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 75%, rgba(0, 153, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+    animation: pulseGlow 8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Estrellas animadas - 3 capas */
+.stars, .stars2, .stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.stars {
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(2px 2px at 40px 70px, white, transparent),
+        radial-gradient(1px 1px at 50px 50px, white, transparent),
+        radial-gradient(1px 1px at 80px 10px, white, transparent),
+        radial-gradient(2px 2px at 90px 60px, white, transparent),
+        radial-gradient(1px 1px at 33px 80px, white, transparent),
+        radial-gradient(1px 1px at 75px 90px, white, transparent);
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    animation: sparkle 3s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.stars2 {
+    background-image: 
+        radial-gradient(1px 1px at 30px 20px, white, transparent),
+        radial-gradient(1px 1px at 60px 80px, white, transparent),
+        radial-gradient(2px 2px at 90px 40px, white, transparent),
+        radial-gradient(1px 1px at 10px 60px, white, transparent);
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    animation: sparkle 4s ease-in-out infinite reverse;
+    opacity: 0.4;
+}
+
+.stars3 {
+    background-image: 
+        radial-gradient(1px 1px at 70px 30px, rgba(0, 212, 255, 0.8), transparent),
+        radial-gradient(2px 2px at 120px 90px, rgba(0, 212, 255, 0.8), transparent),
+        radial-gradient(1px 1px at 160px 50px, rgba(0, 212, 255, 0.8), transparent);
+    background-size: 400px 400px;
+    background-repeat: repeat;
+    animation: sparkle 5s ease-in-out infinite;
+    opacity: 0.5;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.hero h1 {
+    animation: fadeInUp 1s ease-out;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    animation: fadeInUp 1.2s ease-out;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-space {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-secondary) 100%);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.btn-space:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.6);
+    color: #fff;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15rem;
+    color: var(--accent-color);
+    animation: float 6s ease-in-out infinite;
+    text-shadow: 0 0 50px rgba(0, 212, 255, 0.8);
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+    border-radius: 2px;
+}
+
+/* About Section */
+.about-image img {
+    transition: transform 0.5s ease;
+    border-radius: 15px;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-content h3 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.stat-box {
+    transition: transform 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h4 {
+    font-weight: bold;
+}
+
+/* Destination Section con fondo espacial */
+#destinos {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, #001a33 100%);
+}
+
+.destination-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 50% 50%, white, transparent),
+        radial-gradient(1px 1px at 80% 10%, white, transparent),
+        radial-gradient(2px 2px at 90% 60%, white, transparent),
+        radial-gradient(1px 1px at 33% 50%, white, transparent),
+        radial-gradient(1px 1px at 75% 90%, white, transparent);
+    background-size: 200% 200%;
+    animation: twinkle 10s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 0.3; }
+}
+
+/* Destination Cards con imágenes */
+.destination-card {
+    transition: all 0.4s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4) !important;
+}
+
+.card-img-top-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 23, 45, 0.3) 100%);
+}
+
+.destination-icon {
+    font-size: 4rem;
+    color: var(--accent-color);
+    transition: transform 0.3s;
+}
+
+.destination-card:hover .destination-icon {
+    transform: scale(1.2);
+}
+
+.destination-card .card-title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.destination-card ul li {
+    margin-bottom: 8px;
+}
+
+/* Contact Section */
+#contacto {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+#contacto .section-title {
+    color: #fff;
+}
+
+#contacto .section-title::after {
+    background: linear-gradient(90deg, var(--accent-color), #fff);
+}
+
+.contact-box {
+    background: rgba(0, 212, 255, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.contact-box:hover {
+    background: rgba(0, 212, 255, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(0, 212, 255, 0.4);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+}
+
+.contact-box a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Footer */
+footer {
+    border-top: 3px solid var(--accent-color);
+}
+
+.logo-icon-small {
+    width: 35px;
+    height: 35px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.social-links a {
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-image {
+        font-size: 12rem;
+        height: 350px;
+    }
+    
+    .card-img-top-wrapper {
+        height: 180px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-image {
+        font-size: 10rem;
+        height: 300px;
+        margin-top: 2rem;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+    
+    .hero .row {
+        min-height: auto !important;
+    }
+    
+    .card-img-top-wrapper {
+        height: 160px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        margin-right: 8px;
+    }
+    
+    .hero-image {
+        height: 250px;
+        font-size: 8rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .destination-icon {
+        font-size: 3rem;
+    }
+    
+    .nav-link {
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    .about-content {
+        margin-top: 2rem;
+    }
+    
+    .contact-box {
+        margin-bottom: 1rem;
+    }
+    
+    .card-img-top-wrapper {
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin-right: 6px;
+    }
+    
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem !important;
+        margin-top: 1rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .hero-image {
+        height: 200px;
+        font-size: 6rem;
+    }
+    
+    .btn-space {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .destination-card .card-body {
+        padding: 1.5rem !important;
+    }
+    
+    .contact-icon {
+        font-size: 2.5rem;
+    }
+    
+    .stat-box h4 {
+        font-size: 1.5rem;
+    }
+    
+    footer .row {
+        text-align: center !important;
+    }
+    
+    footer .col-md-6 {
+        text-align: center !important;
+        margin-bottom: 1rem;
+    }
+    
+    .card-img-top-wrapper {
+        height: 140px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    .hero-image {
+        height: 180px;
+        font-size: 5rem;
+    }
+    
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .card-img-top-wrapper {
+        height: 120px;
+    }
+}

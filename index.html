@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travel - Viajes Espaciales</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <span class="logo-icon">
+                    <i class="bi bi-rocket-takeoff"></i>
+                </span>
+                Space Travel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#destinos">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 text-white">
+                    <h1 class="display-3 fw-bold mb-4">Explora el Universo</h1>
+                    <p class="lead mb-4">Tu aventura espacial comienza aquí. Viaja a las estrellas y descubre nuevos mundos.</p>
+                    <a href="#destinos" class="btn btn-space btn-lg">
+                        <i class="bi bi-stars me-2"></i>Explorar Destinos
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <i class="bi bi-globe2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Sobre Nosotros</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&h=600&fit=crop" 
+                             alt="Espacio" 
+                             class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3 class="mb-4">Pioneros en Turismo Espacial</h3>
+                        <p class="lead mb-3">Desde 2020, hemos estado llevando a viajeros valientes más allá de la atmósfera terrestre, ofreciendo experiencias únicas que cambian vidas.</p>
+                        <p class="mb-3">Nuestra misión es hacer que el espacio sea accesible para todos, combinando tecnología de vanguardia con la máxima seguridad y confort.</p>
+                        <p>Con más de 500 vuelos exitosos y 2,000 pasajeros satisfechos, somos líderes en la industria del turismo espacial.</p>
+                        <div class="mt-4">
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="stat-box p-3 bg-white rounded shadow-sm">
+                                        <h4 class="text-primary mb-0">500+</h4>
+                                        <p class="mb-0 small">Vuelos Exitosos</p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="stat-box p-3 bg-white rounded shadow-sm">
+                                        <h4 class="text-primary mb-0">2000+</h4>
+                                        <p class="mb-0 small">Pasajeros Felices</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinos -->
+    <section id="destinos" class="py-5 position-relative">
+        <div class="destination-bg"></div>
+        <div class="container position-relative">
+            <h2 class="text-center mb-5 section-title text-white">Nuestros Destinos</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card destination-card h-100 border-0 shadow">
+                        <div class="card-img-top-wrapper">
+                            <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=800&h=400&fit=crop" 
+                                 alt="Órbita Lunar" 
+                                 class="card-img-top">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <div class="destination-icon mb-3">
+                                <i class="bi bi-moon-stars"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Órbita Lunar</h3>
+                            <p class="card-text">Observa la Luna como nunca antes. Un viaje de 3 días alrededor de nuestro satélite natural con vistas espectaculares de la Tierra.</p>
+                            <div class="price mb-3">
+                                <span class="h5 text-primary">$250,000</span>
+                            </div>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>3 días de duración</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Entrenamiento incluido</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Comidas gourmet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card destination-card h-100 border-0 shadow">
+                        <div class="card-img-top-wrapper">
+                            <img src="https://images.unsplash.com/photo-1516849677043-ef67c9557e16?w=800&h=400&fit=crop" 
+                                 alt="Estación Espacial" 
+                                 class="card-img-top">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <div class="destination-icon mb-3">
+                                <i class="bi bi-building"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Estación Espacial</h3>
+                            <p class="card-text">Vive en gravedad cero en la Estación Espacial Internacional. Una experiencia de 7 días que nunca olvidarás.</p>
+                            <div class="price mb-3">
+                                <span class="h5 text-primary">$500,000</span>
+                            </div>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>7 días en órbita</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Experimentos científicos</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Caminata espacial</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card destination-card h-100 border-0 shadow">
+                        <div class="card-img-top-wrapper">
+                            <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800&h=400&fit=crop" 
+                                 alt="Misión Marciana" 
+                                 class="card-img-top">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <div class="destination-icon mb-3">
+                                <i class="bi bi-brightness-high"></i>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Misión Marciana</h3>
+                            <p class="card-text">Sé parte de la historia. Un viaje épico de 6 meses al Planeta Rojo con retorno garantizado a la Tierra.</p>
+                            <div class="price mb-3">
+                                <span class="h5 text-primary">$2,000,000</span>
+                            </div>
+                            <ul class="list-unstyled text-start">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>6 meses ida y vuelta</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Superficie marciana</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Equipo experto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Contacto</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-box text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Ubicación</h4>
+                        <p class="mb-0">Centro Espacial Kennedy<br>Florida, Estados Unidos<br>Código Postal: 32899</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-box text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Email</h4>
+                        <p class="mb-0">
+                            <a href="mailto:info@spacetravel.com" class="text-white text-decoration-none">info@spacetravel.com</a><br>
+                            <a href="mailto:reservas@spacetravel.com" class="text-white text-decoration-none">reservas@spacetravel.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-box text-center p-4">
+                        <div class="contact-icon mb-3">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h4 class="h5 mb-3">Teléfono</h4>
+                        <p class="mb-0">
+                            +1 (321) 867-5000<br>
+                            +1 (800) SPACE-GO<br>
+                            Disponible 24/7
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="footer-logo mb-2">
+                        <span class="logo-icon-small me-2">
+                            <i class="bi bi-rocket-takeoff"></i>
+                        </span>
+                        <span class="fw-bold">Space Travel</span>
+                    </div>
+                    <p class="mb-0 small">&copy; 2025 Space Travel. Todos los derechos reservados.</p>
+                    <p class="mb-0 small">Haciendo realidad los sueños espaciales desde 2020</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links mb-2">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                    <p class="mb-0 small">Síguenos en redes sociales</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
